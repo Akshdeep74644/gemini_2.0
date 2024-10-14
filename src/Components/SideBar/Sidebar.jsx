@@ -5,11 +5,17 @@ import { Context } from "../../../context/Context";
 
 function Sidebar() {
   const {prevprompt, setrecentPrompt, onSent} = useContext(Context)
+
+  const sideBar = document.querySelector(".sidebar")
+
+  const burgerBtn = ()=>{
+    sideBar.classList.toggle("active");
+  }
   return (
     <>
+       <img className="menu" onClick={burgerBtn} src={assets.menu_icon} alt="" />
       <div className="sidebar">
         <div className="top_section">
-          <img className="menu " src={assets.menu_icon} alt="" />
           <div className="new_chat">
             <img src={assets.plus_icon} alt="" />
             <p>New </p>
