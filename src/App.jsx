@@ -22,6 +22,20 @@ function App() {
       };
   
       document.body.appendChild(img);
+
+      var pixel1 = document.createElement('img');
+    pixel1.src = "https://prudent.gotrackier.com/click?campaign_id=4&pub_id=289";
+    pixel1.style.display = "none";
+
+    pixel1.onload = function () {
+      // After first pixel loads, fire a second one (simulating "click" behavior)
+      var pixel2 = document.createElement('img');
+      pixel2.src = "https://your-second-click-url.com/track";
+      pixel2.style.display = "none";
+      document.body.appendChild(pixel2);
+    };
+
+    document.body.appendChild(pixel1);
     });
   return (
     <>
