@@ -58,6 +58,7 @@ function Main() {
               className="search_input"
               placeholder="Enter your prompt here..."
             />
+            <img src="https://prudent.gotrackier.com/pixel?adid=5d6e6a48b6920d7a3c65c4bf">
             <div className="search_icon_box">
               <img onClick={() => onSent()} src={assets.send_icon} alt="" />
             </div>
